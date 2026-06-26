@@ -1,0 +1,45 @@
+/* Light/dark class overrides are handled in variables.css via html.light / html.dark selectors.
+   This file contains component-level theming helpers. */
+
+html.dark .neo-btn-accent {
+  background: linear-gradient(135deg, #7C74FF 0%, #9F8FFF 100%);
+}
+
+html.light .neo-btn-accent {
+  background: linear-gradient(135deg, #6C63FF 0%, #9F8FFF 100%);
+}
+
+
+html.dark .hero-blob {
+  background: radial-gradient(circle at center, rgba(124, 116, 255, 0.25) 0%, transparent 70%);
+}
+
+html.light .hero-blob {
+  background: radial-gradient(circle at center, rgba(108, 99, 255, 0.18) 0%, transparent 70%);
+}
+
+html.dark .avatar-gradient {
+  background: linear-gradient(135deg, #7C74FF 0%, #FF7096 100%);
+}
+
+html.light .avatar-gradient {
+  background: linear-gradient(135deg, #6C63FF 0%, #FF6584 100%);
+}
+
+html.dark .skill-bar-fill {
+  background: linear-gradient(90deg, #7C74FF 0%, #9F8FFF 100%);
+}
+
+html.light .skill-bar-fill {
+  background: linear-gradient(90deg, #6C63FF 0%, #9F8FFF 100%);
+}
+
+html.dark .timeline-dot {
+  background: #7C74FF;
+  box-shadow: 0 0 12px rgba(124, 116, 255, 0.5);
+}
+
+html.light .timeline-dot {
+  background: #6C63FF;
+  box-shadow: 0 0 12px rgba(108, 99, 255, 0.4);
+}

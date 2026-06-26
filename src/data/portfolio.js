@@ -1,0 +1,195 @@
+export const personal = {
+  name: 'Amrit Singh',
+  initials: 'AS',
+  role: 'Full Stack Developer',
+  roles: ['Full Stack Developer', 'AI/ML Enthusiast', 'Open Source Contributor'],
+  tagline: "I craft clean, performant web experiences that users love.",
+  bio1:
+    "I'm a passionate Full Stack Developer with 5+ years of experience building scalable web applications. I thrive at the intersection of design and engineering — turning complex problems into elegant, intuitive interfaces.",
+  bio2:
+    "When I'm not coding, I contribute to open-source projects, write technical articles, and explore new technologies to stay ahead of the curve.",
+  location: 'Kanpur, UP, India',
+  email: 'amrit23101@iiitnr.edu.in',
+  phone: '+91 7881107882',
+  yearsExp: 5,
+  projectsCount: 20,
+  clientsCount: 30,
+  coffeeCount: 999,
+  cvUrl: '#',
+  avatarUrl: null,
+}
+
+export const social = [
+  { label: 'GitHub', href: '#', icon: 'github' },
+  { label: 'LinkedIn', href: '#', icon: 'linkedin' },
+  { label: 'Twitter', href: '#', icon: 'twitter' },
+]
+
+export const skills = [
+  {
+    category: 'Frontend',
+    items: [
+      { name: 'React', icon: '⚛', proficiency: 95 },
+      { name: 'TypeScript', icon: 'TS', proficiency: 88 },
+      { name: 'CSS / Sass', icon: '🎨', proficiency: 92 },
+      { name: 'Next.js', icon: 'N', proficiency: 85 },
+      { name: 'Vue.js', icon: '🟢', proficiency: 72 },
+      { name: 'Tailwind', icon: '💨', proficiency: 90 },
+    ],
+  },
+  {
+    category: 'Backend',
+    items: [
+      { name: 'Node.js', icon: '🟩', proficiency: 90 },
+      { name: 'Python', icon: '🐍', proficiency: 82 },
+      { name: 'PostgreSQL', icon: '🐘', proficiency: 85 },
+      { name: 'GraphQL', icon: 'GQ', proficiency: 78 },
+      { name: 'Redis', icon: '🔴', proficiency: 70 },
+      { name: 'REST APIs', icon: '🔗', proficiency: 95 },
+    ],
+  },
+  {
+    category: 'Tools',
+    items: [
+      { name: 'Git', icon: '🌿', proficiency: 95 },
+      { name: 'Docker', icon: '🐳', proficiency: 80 },
+      { name: 'AWS', icon: '☁', proficiency: 74 },
+      { name: 'Figma', icon: '✏', proficiency: 78 },
+      { name: 'CI/CD', icon: '⚙', proficiency: 76 },
+      { name: 'Jest', icon: '🃏', proficiency: 82 },
+    ],
+  },
+  {
+    category: 'Design',
+    items: [
+      { name: 'UI/UX Design', icon: '🖌', proficiency: 80 },
+      { name: 'Responsive', icon: '📱', proficiency: 95 },
+      { name: 'Accessibility', icon: '♿', proficiency: 85 },
+      { name: 'Animation', icon: '🎞', proficiency: 78 },
+      { name: 'Design Systems', icon: '🧩', proficiency: 82 },
+      { name: 'Prototyping', icon: '🔬', proficiency: 76 },
+    ],
+  },
+]
+
+export const projects = [
+  {
+    id: 1,
+    title: 'E-Commerce Platform',
+    description: 'A full-featured e-commerce solution with real-time inventory, payment integration, and admin dashboard.',
+    category: 'Full Stack',
+    tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
+    gradient: 'linear-gradient(135deg, #6C63FF 0%, #FF6584 100%)',
+    github: '#',
+    live: '#',
+  },
+  {
+    id: 2,
+    title: 'Design System Library',
+    description: 'A comprehensive React component library with 60+ components, Storybook docs, and accessibility-first design.',
+    category: 'Frontend',
+    tags: ['React', 'TypeScript', 'Storybook', 'CSS'],
+    gradient: 'linear-gradient(135deg, #48BB78 0%, #38B2AC 100%)',
+    github: '#',
+    live: '#',
+  },
+  {
+    id: 3,
+    title: 'Real-Time Analytics',
+    description: 'A dashboard for visualizing real-time data streams with WebSocket connections and interactive charts.',
+    category: 'Full Stack',
+    tags: ['Vue.js', 'Python', 'Redis', 'WebSocket'],
+    gradient: 'linear-gradient(135deg, #ECC94B 0%, #ED8936 100%)',
+    github: '#',
+    live: '#',
+  },
+  {
+    id: 4,
+    title: 'AI Content Generator',
+    description: 'A SaaS tool that leverages LLMs to generate high-quality marketing copy, blog posts, and social content.',
+    category: 'Full Stack',
+    tags: ['Next.js', 'OpenAI', 'Supabase', 'Stripe'],
+    gradient: 'linear-gradient(135deg, #667EEA 0%, #764BA2 100%)',
+    github: '#',
+    live: '#',
+  },
+  {
+    id: 5,
+    title: 'Mobile Banking UI',
+    description: 'A pixel-perfect mobile banking interface prototype with smooth animations and accessibility compliance.',
+    category: 'Frontend',
+    tags: ['React Native', 'Figma', 'Expo', 'CSS'],
+    gradient: 'linear-gradient(135deg, #F093FB 0%, #F5576C 100%)',
+    github: '#',
+    live: '#',
+  },
+  {
+    id: 6,
+    title: 'DevOps Pipeline',
+    description: 'Automated CI/CD pipeline for zero-downtime deployments with Kubernetes, GitHub Actions, and monitoring.',
+    category: 'Backend',
+    tags: ['Docker', 'K8s', 'GitHub Actions', 'AWS'],
+    gradient: 'linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%)',
+    github: '#',
+    live: '#',
+  },
+]
+
+export const experience = [
+  {
+    id: 1,
+    role: 'Senior Full Stack Engineer',
+    company: 'TechFlow Inc.',
+    period: 'Jan 2023 — Present',
+    type: 'Full-time',
+    achievements: [
+      'Led migration of monolithic app to microservices, reducing load time by 60%',
+      'Architected real-time collaboration features used by 50K+ daily active users',
+      'Mentored team of 4 junior developers, improving sprint velocity by 35%',
+    ],
+    logo: 'TF',
+    color: '#6C63FF',
+  },
+  {
+    id: 2,
+    role: 'Full Stack Developer',
+    company: 'Nexus Digital',
+    period: 'Mar 2021 — Dec 2022',
+    type: 'Full-time',
+    achievements: [
+      'Built and shipped 8 client projects across fintech, health, and e-commerce verticals',
+      'Developed reusable component library adopted across all product teams',
+      'Integrated payment gateways processing $2M+ in monthly transactions',
+    ],
+    logo: 'ND',
+    color: '#48BB78',
+  },
+  {
+    id: 3,
+    role: 'Frontend Engineer',
+    company: 'Pixel Lab',
+    period: 'Jun 2020 — Feb 2021',
+    type: 'Contract',
+    achievements: [
+      'Redesigned core product UI improving user retention by 28%',
+      'Implemented accessibility standards (WCAG 2.1 AA) across product suite',
+      'Reduced bundle size by 45% through code-splitting and lazy loading',
+    ],
+    logo: 'PL',
+    color: '#FF6584',
+  },
+  {
+    id: 4,
+    role: 'Junior Developer',
+    company: 'StartupXYZ',
+    period: 'Jan 2019 — May 2020',
+    type: 'Full-time',
+    achievements: [
+      'Developed core features for B2B SaaS platform from 0 to 500 customers',
+      'Built REST API with Node.js serving 1M+ requests per day',
+      'Created automated test suite achieving 80% code coverage',
+    ],
+    logo: 'SX',
+    color: '#ECC94B',
+  },
+]

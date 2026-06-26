@@ -1,0 +1,152 @@
+:root {
+  /* Typography scale */
+  --fs-hero: clamp(2.5rem, 6vw, 4.5rem);
+  --fs-h2: clamp(1.8rem, 3.5vw, 2.8rem);
+  --fs-h3: 1.3rem;
+  --fs-body: 1rem;
+  --fs-sm: 0.875rem;
+  --fs-xs: 0.75rem;
+
+  /* Font families */
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Neo radii */
+  --neo-radius: 16px;
+  --neo-radius-sm: 10px;
+  --neo-radius-pill: 50px;
+
+  /* Transition */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Spacing system (8px base) */
+  --sp-1: 8px;
+  --sp-2: 16px;
+  --sp-3: 24px;
+  --sp-4: 32px;
+  --sp-5: 40px;
+  --sp-6: 48px;
+  --sp-8: 64px;
+  --sp-10: 80px;
+  --sp-12: 96px;
+
+  /* Section max-width */
+  --max-w: 1200px;
+}
+
+/* ── LIGHT (default) ── */
+html.light,
+html:not(.dark) {
+  --bg-base: #E0E5EC;
+  --bg-surface: #E0E5EC;
+  --shadow-light: #FFFFFF;
+  --shadow-dark: #A3B1C6;
+  --text-primary: #2D3748;
+  --text-secondary: #4A5568;
+  --text-muted: #718096;
+  --accent: #6C63FF;
+  --accent-soft: #E8E6FF;
+  --accent-alt: #FF6584;
+  --success: #48BB78;
+  --warning: #ECC94B;
+  --error: #FC8181;
+  --border-subtle: rgba(255, 255, 255, 0.6);
+
+  --neo-raised:
+    3px 3px 7px var(--shadow-dark),
+    -3px -3px 7px var(--shadow-light);
+
+  --neo-pressed:
+    inset 2px 2px 4px var(--shadow-dark),
+    inset -2px -2px 4px var(--shadow-light);
+
+  --neo-flat:
+    1px 1px 3px var(--shadow-dark),
+    -1px -1px 3px var(--shadow-light);
+
+  --neo-float:
+    5px 5px 11px var(--shadow-dark),
+    -5px -5px 11px var(--shadow-light);
+
+  /* Mobile-reduced shadows */
+  --neo-raised-sm:
+    2px 2px 4px var(--shadow-dark),
+    -2px -2px 4px var(--shadow-light);
+
+  --neo-pressed-sm:
+    inset 1px 1px 3px var(--shadow-dark),
+    inset -1px -1px 3px var(--shadow-light);
+
+  /* Text emboss shadows */
+  --text-neo-hero:
+    2px 2px 4px var(--shadow-dark),
+    -1px -1px 3px var(--shadow-light);
+  --text-neo-heading:
+    1px 1px 3px var(--shadow-dark),
+    -1px -1px 2px var(--shadow-light);
+  --text-neo-sub:
+    1px 1px 2px var(--shadow-dark),
+    -1px -1px 1px var(--shadow-light);
+  /* Large display text (footer CTA, hero) */
+  --text-neo-display:
+    5px 5px 10px var(--shadow-dark),
+    -3px -3px 7px var(--shadow-light);
+}
+
+/* ── DARK ── */
+html.dark {
+  --bg-base: #1E2235;
+  --bg-surface: #1E2235;
+  --shadow-light: #2A2F4A;
+  --shadow-dark: #12151F;
+  --text-primary: #E8EAF0;
+  --text-secondary: #B0B8D0;
+  --text-muted: #6B7394;
+  --accent: #7C74FF;
+  --accent-soft: #2A2650;
+  --accent-alt: #FF7096;
+  --success: #68D391;
+  --warning: #F6E05E;
+  --error: #FC8181;
+  --border-subtle: rgba(255, 255, 255, 0.05);
+
+  --neo-raised:
+    4px 4px 10px var(--shadow-dark),
+    -4px -4px 10px var(--shadow-light);
+
+  --neo-pressed:
+    inset 2px 2px 6px var(--shadow-dark),
+    inset -2px -2px 6px var(--shadow-light);
+
+  --neo-flat:
+    2px 2px 5px var(--shadow-dark),
+    -2px -2px 5px var(--shadow-light);
+
+  --neo-float:
+    7px 7px 15px var(--shadow-dark),
+    -7px -7px 15px var(--shadow-light);
+
+  --neo-raised-sm:
+    2px 2px 6px var(--shadow-dark),
+    -2px -2px 6px var(--shadow-light);
+
+  --neo-pressed-sm:
+    inset 1px 1px 4px var(--shadow-dark),
+    inset -1px -1px 4px var(--shadow-light);
+
+  /* Text emboss shadows */
+  --text-neo-hero:
+    2px 2px 5px var(--shadow-dark),
+    -1px -1px 3px var(--shadow-light);
+  --text-neo-heading:
+    1px 1px 4px var(--shadow-dark),
+    -1px -1px 2px var(--shadow-light);
+  --text-neo-sub:
+    1px 1px 2px var(--shadow-dark),
+    -1px -1px 1px var(--shadow-light);
+  /* Large display text (footer CTA, hero) */
+  --text-neo-display:
+    6px 6px 12px var(--shadow-dark),
+    -4px -4px 9px var(--shadow-light);
+}

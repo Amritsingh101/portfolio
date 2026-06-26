@@ -1,0 +1,31 @@
+.theme-toggle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  box-shadow: var(--neo-raised);
+  background: var(--bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  box-shadow: var(--neo-float);
+  color: var(--accent);
+  transform: rotate(20deg);
+}
+
+.theme-toggle:active {
+  box-shadow: var(--neo-pressed);
+  transform: rotate(0deg);
+}
+
+.theme-toggle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}

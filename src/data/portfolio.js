@@ -15,14 +15,14 @@ export const personal = {
   projectsCount: 20,
   clientsCount: 30,
   coffeeCount: 999,
-  cvUrl: '#',
+  cvUrl: '/Amrit_singh_Resume.pdf',
   avatarUrl: null,
 }
 
 export const social = [
-  { label: 'GitHub', href: '#', icon: 'github' },
-  { label: 'LinkedIn', href: '#', icon: 'linkedin' },
-  { label: 'Twitter', href: '#', icon: 'twitter' },
+  { label: 'GitHub', href: 'https://github.com/Amritsingh101', icon: 'github' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/amrit-singh02/', icon: 'linkedin' },
+  { label: 'Twitter', href: 'https://x.com/AMRITSI86170335', icon: 'twitter' },
 ]
 
 export const skills = [

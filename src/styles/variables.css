@@ -40,8 +40,9 @@ html.light,
 html:not(.dark) {
   --bg-base: #E0E5EC;
   --bg-surface: #E0E5EC;
+  --bg-surface2: rgba(187, 213, 218, 0.5);
   --shadow-light: #FFFFFF;
-  --shadow-dark: #A3B1C6;
+  --shadow-dark: #00000038;
   --text-primary: #2D3748;
   --text-secondary: #4A5568;
   --text-muted: #718096;
@@ -54,7 +55,7 @@ html:not(.dark) {
   --border-subtle: rgba(255, 255, 255, 0.6);
 
   --neo-raised:
-    3px 3px 7px var(--shadow-dark),
+    4px 5px 8px var(--shadow-dark),
     -3px -3px 7px var(--shadow-light);
 
   --neo-pressed:
@@ -80,25 +81,28 @@ html:not(.dark) {
 
   /* Text emboss shadows */
   --text-neo-hero:
-    2px 2px 4px var(--shadow-dark),
-    -1px -1px 3px var(--shadow-light);
+    4px 4px 6px var(--shadow-dark),
+    -5px -5px 7px var(--shadow-light);
+  /* 1px 1px 0px var(--shadow-light); */
   --text-neo-heading:
-    1px 1px 3px var(--shadow-dark),
-    -1px -1px 2px var(--shadow-light);
+    3px 3px 6px var(--shadow-dark),
+    -2px -2px 4px var(--shadow-light);
   --text-neo-sub:
     1px 1px 2px var(--shadow-dark),
     -1px -1px 1px var(--shadow-light);
   /* Large display text (footer CTA, hero) */
   --text-neo-display:
-    5px 5px 10px var(--shadow-dark),
-    -3px -3px 7px var(--shadow-light);
+    7px 7px 10px var(--shadow-dark),
+    -5px -5px 10px var(--shadow-light),
+    1px 1px 0px var(--shadow-light);
 }
 
 /* ── DARK ── */
 html.dark {
   --bg-base: #1E2235;
   --bg-surface: #1E2235;
-  --shadow-light: #2A2F4A;
+  --bg-surface2: #191c2ead;
+  --shadow-light: rgba(224, 212, 255, 0.085);
   --shadow-dark: #12151F;
   --text-primary: #E8EAF0;
   --text-secondary: #B0B8D0;
@@ -137,16 +141,18 @@ html.dark {
 
   /* Text emboss shadows */
   --text-neo-hero:
-    2px 2px 5px var(--shadow-dark),
-    -1px -1px 3px var(--shadow-light);
+    5px 5px 10px var(--shadow-dark),
+    -3px -3px 7px var(--shadow-light),
+    1px 1px 0px rgba(224, 212, 255, 0.12);
   --text-neo-heading:
-    1px 1px 4px var(--shadow-dark),
-    -1px -1px 2px var(--shadow-light);
+    3px 3px 7px var(--shadow-dark),
+    -2px -2px 5px var(--shadow-light);
   --text-neo-sub:
     1px 1px 2px var(--shadow-dark),
     -1px -1px 1px var(--shadow-light);
   /* Large display text (footer CTA, hero) */
   --text-neo-display:
-    6px 6px 12px var(--shadow-dark),
-    -4px -4px 9px var(--shadow-light);
+    9px 9px 18px var(--shadow-dark),
+    -6px -6px 13px var(--shadow-light),
+    2px 2px 0px rgba(224, 212, 255, 0.1);
 }

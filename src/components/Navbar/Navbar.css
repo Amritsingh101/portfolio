@@ -7,17 +7,19 @@
   z-index: 100;
   padding: 0 var(--sp-4);
   transition: var(--transition);
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--bg-surface);
 }
 
 .navbar--scrolled {
-  background: rgba(var(--bg-base-rgb, 224, 229, 236), 0.85);
+  background: var(--bg-surface2);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: var(--neo-flat);
 }
 
 html.dark .navbar--scrolled {
-  background: rgba(30, 34, 53, 0.85);
+  background: var(--bg-surface2);
 }
 
 .navbar-inner {

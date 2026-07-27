@@ -14,7 +14,7 @@ const INFO_CHIPS = [
   { icon: '✉', label: 'Email', value: personal.email },
   { icon: '📞', label: 'Phone', value: personal.phone },
   { icon: '💼', label: 'Status', value: 'Open to Work' },
-  { icon: '🎓', label: 'Degree', value: 'B.Sc. Computer Science' },
+  { icon: '🎓', label: 'Degree', value: 'B.Tech ECE (IIITNR' },
   { icon: '🌐', label: 'Languages', value: 'English, Hindi' },
 ]
 
@@ -83,12 +83,18 @@ export default function About() {
           {/* Left card */}
           <div className="about-card reveal">
             <div className="about-avatar-wrap">
-              <div className="about-avatar avatar-gradient">
-                <svg width="60" height="60" viewBox="0 0 80 80" fill="none" aria-hidden="true">
-                  <circle cx="40" cy="30" r="18" fill="rgba(255,255,255,0.4)"/>
-                  <ellipse cx="40" cy="72" rx="28" ry="18" fill="rgba(255,255,255,0.3)"/>
-                </svg>
-              </div>
+              {personal.avatarUrl ? (
+                <div className="about-avatar">
+                  <img src={personal.avatarUrl} alt={personal.name} className="about-avatar-img" />
+                </div>
+              ) : (
+                <div className="about-avatar avatar-gradient">
+                  <svg width="60" height="60" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+                    <circle cx="40" cy="30" r="18" fill="rgba(255,255,255,0.4)" />
+                    <ellipse cx="40" cy="72" rx="28" ry="18" fill="rgba(255,255,255,0.3)" />
+                  </svg>
+                </div>
+              )}
               <div className="about-name-block">
                 <h3 className="about-person-name">{personal.name}</h3>
                 <span className="about-person-role">{personal.role}</span>
@@ -108,7 +114,7 @@ export default function About() {
 
           {/* Right content */}
           <div className="about-content reveal" style={{ transitionDelay: '0.15s' }}>
-            <h3 className="about-content-title">Crafting digital experiences since 2019</h3>
+            <h3 className="about-content-title">Building Intelligent Systems with Generative AI & Machine Learning</h3>
             <p className="about-bio">{personal.bio1}</p>
             <p className="about-bio">{personal.bio2}</p>
             <div className="about-chips">

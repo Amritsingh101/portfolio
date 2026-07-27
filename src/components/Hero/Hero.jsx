@@ -83,18 +83,20 @@ export default function Hero() {
 
         {/* Right */}
         <div className="hero-visual">
-          <div className="hero-blob animate-blob" aria-hidden="true" />
-
-          <div className="hero-avatar-card animate-float">
-            <div className="hero-avatar avatar-gradient">
-              <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
-                <circle cx="40" cy="30" r="18" fill="rgba(255,255,255,0.4)" />
-                <ellipse cx="40" cy="72" rx="28" ry="18" fill="rgba(255,255,255,0.3)" />
-              </svg>
-            </div>
+          <div className="hero-avatar-card">
+            {personal.avatarUrl ? (
+              <img src={personal.avatarUrl} alt={personal.name} className="hero-avatar-img" />
+            ) : (
+              <div className="hero-avatar avatar-gradient">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+                  <circle cx="40" cy="30" r="18" fill="rgba(255,255,255,0.4)" />
+                  <ellipse cx="40" cy="72" rx="28" ry="18" fill="rgba(255,255,255,0.3)" />
+                </svg>
+              </div>
+            )}
           </div>
 
-          <div className="hero-badge hero-badge--top animate-badge" style={{ animationDelay: '0s' }}>
+          {/* <div className="hero-badge hero-badge--top animate-badge" style={{ animationDelay: '0s' }}>
             <span className="hero-badge-icon">⚡</span>
             <div>
               <div className="hero-badge-num">{personal.yearsExp}+</div>
@@ -116,7 +118,7 @@ export default function Hero() {
               <div className="hero-badge-num">{personal.clientsCount}+</div>
               <div className="hero-badge-label">Clients</div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

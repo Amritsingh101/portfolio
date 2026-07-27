@@ -235,13 +235,13 @@ select {
   /* Size relative to the headline font */
   width: 0.77em;
   height: 0.77em;
-  background: #E6D4B0;
+  background: #E0E0E0;
   border-radius: 50%;
   margin: 0 0.06em;
   /* Neumorphic raised effect on the badge itself */
   box-shadow:
-    3px 3px 8px rgba(0, 0, 0, 0.30),
-    -2px -2px 5px rgba(255, 255, 255, 0.10);
+    3px 3px 8px rgba(0, 0, 0, 0.25),
+    -2px -2px 5px rgba(255, 255, 255, 0.15);
   transition:
     transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
     background 0.3s ease,
@@ -252,17 +252,16 @@ select {
 /* Logo animates only when hovering the headline words */
 .footer-cta-headline:hover .footer-cta-logo-wrap {
   transform: scale(1.05) rotate(8deg);
-  background: #F0DEB8;
+  background: #CCCCCC;
   box-shadow:
-    5px 5px 12px rgba(0, 0, 0, 0.35),
-    -3px -3px 8px rgba(255, 255, 255, 0.12);
+    5px 5px 12px rgba(0, 0, 0, 0.30),
+    -3px -3px 8px rgba(255, 255, 255, 0.18);
 }
 
 .footer-cta-logo-svg {
   width: 52% !important;
   height: 52% !important;
-  /* Icon always dark inside the warm badge */
-  color: #1A1A2E !important;
+  color: #111111 !important;
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 

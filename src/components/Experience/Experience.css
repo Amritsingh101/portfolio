@@ -9,7 +9,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+  background: var(--accent);
   transform: translateX(-50%);
   opacity: 0.35;
 }

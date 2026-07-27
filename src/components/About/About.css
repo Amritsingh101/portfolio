@@ -26,14 +26,39 @@
 }
 
 .about-avatar {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
-  box-shadow: var(--neo-float);
+  background: var(--bg-surface);
+  box-shadow:
+
+    inset 2px 2px 4px var(--shadow-dark),
+    inset -2px -2px 4px var(--shadow-light);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
+  transition: var(--transition);
+}
+
+.about-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  filter: drop-shadow(3px 4px 6px var(--shadow-dark)) drop-shadow(-2px -2px 4px var(--shadow-light));
+  transition: var(--transition);
+}
+
+.about-avatar:hover .about-avatar-img {
+  transform: scale(1.05);
+}
+
+html.dark .about-avatar-img,
+html.dark .about-avatar:hover .about-avatar-img {
+  filter: none;
 }
 
 .about-name-block {

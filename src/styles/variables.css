@@ -38,21 +38,21 @@
 /* ── LIGHT (default) ── */
 html.light,
 html:not(.dark) {
-  --bg-base: #E0E5EC;
-  --bg-surface: #E0E5EC;
-  --bg-surface2: rgba(187, 213, 218, 0.5);
+  --bg-base: #E8F9FF;
+  --bg-surface: #E8F9FF;
+  --bg-surface2: rgba(215, 240, 250, 0.75);
   --shadow-light: #FFFFFF;
-  --shadow-dark: #00000038;
-  --text-primary: #2D3748;
-  --text-secondary: #4A5568;
-  --text-muted: #718096;
-  --accent: #6C63FF;
-  --accent-soft: #E8E6FF;
-  --accent-alt: #FF6584;
-  --success: #48BB78;
-  --warning: #ECC94B;
-  --error: #FC8181;
-  --border-subtle: rgba(255, 255, 255, 0.6);
+  --shadow-dark: rgba(0, 50, 80, 0.14);
+  --text-primary: #0F1E28;
+  --text-secondary: #2C3E4C;
+  --text-muted: #5C7080;
+  --accent: #2E7088;          /* bunny deep teal */
+  --accent-soft: rgba(46, 112, 136, 0.10);
+  --accent-alt: #82B4C9;      /* bunny light blue */
+  --success: #3A8A6E;
+  --warning: #555555;
+  --error: #222222;
+  --border-subtle: rgba(255, 255, 255, 0.7);
 
   --neo-raised:
     4px 5px 8px var(--shadow-dark),
@@ -83,7 +83,6 @@ html:not(.dark) {
   --text-neo-hero:
     4px 4px 6px var(--shadow-dark),
     -5px -5px 7px var(--shadow-light);
-  /* 1px 1px 0px var(--shadow-light); */
   --text-neo-heading:
     3px 3px 6px var(--shadow-dark),
     -2px -2px 4px var(--shadow-light);
@@ -99,20 +98,20 @@ html:not(.dark) {
 
 /* ── DARK ── */
 html.dark {
-  --bg-base: #1E2235;
-  --bg-surface: #1E2235;
-  --bg-surface2: #191c2ead;
-  --shadow-light: rgba(224, 212, 255, 0.085);
-  --shadow-dark: #12151F;
-  --text-primary: #E8EAF0;
-  --text-secondary: #B0B8D0;
-  --text-muted: #6B7394;
-  --accent: #7C74FF;
-  --accent-soft: #2A2650;
-  --accent-alt: #FF7096;
-  --success: #68D391;
-  --warning: #F6E05E;
-  --error: #FC8181;
+  --bg-base: #1A1A1A;
+  --bg-surface: #1A1A1A;
+  --bg-surface2: rgba(10, 10, 10, 0.7);
+  --shadow-light: rgba(255, 255, 255, 0.06);
+  --shadow-dark: #0A0A0A;
+  --text-primary: #F0F0F0;
+  --text-secondary: #BBBBBB;
+  --text-muted: #888888;
+  --accent: #82B4C9;          /* bunny light blue */
+  --accent-soft: rgba(130, 180, 201, 0.12);
+  --accent-alt: #A8C8D6;      /* bunny pale blue */
+  --success: #5BADA0;
+  --warning: #AAAAAA;
+  --error: #DDDDDD;
   --border-subtle: rgba(255, 255, 255, 0.05);
 
   --neo-raised:
@@ -142,8 +141,7 @@ html.dark {
   /* Text emboss shadows */
   --text-neo-hero:
     5px 5px 10px var(--shadow-dark),
-    -3px -3px 7px var(--shadow-light),
-    1px 1px 0px rgba(224, 212, 255, 0.12);
+    -3px -3px 7px var(--shadow-light);
   --text-neo-heading:
     3px 3px 7px var(--shadow-dark),
     -2px -2px 5px var(--shadow-light);
@@ -153,6 +151,5 @@ html.dark {
   /* Large display text (footer CTA, hero) */
   --text-neo-display:
     9px 9px 18px var(--shadow-dark),
-    -6px -6px 13px var(--shadow-light),
-    2px 2px 0px rgba(224, 212, 255, 0.1);
+    -6px -6px 13px var(--shadow-light);
 }

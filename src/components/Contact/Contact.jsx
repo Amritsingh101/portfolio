@@ -20,19 +20,69 @@ export default function Contact() {
     return () => reveals.forEach((el) => obs.unobserve(el))
   }, [])
 
+  const COOLDOWN_TIME_MS = 60 * 1000 // 60 seconds rate limit
+  const LAST_SUBMIT_KEY = 'portfolio-contact-last-submit'
+
+  const [errorMessage, setErrorMessage] = useState('')
+
   const handleChange = (e) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    setErrorMessage('')
+
+    // Rate limit check
+    const lastSubmitTime = localStorage.getItem(LAST_SUBMIT_KEY)
+    const now = Date.now()
+
+    if (lastSubmitTime) {
+      const timeElapsed = now - parseInt(lastSubmitTime, 10)
+      if (timeElapsed < COOLDOWN_TIME_MS) {
+        const remainingSeconds = Math.ceil((COOLDOWN_TIME_MS - timeElapsed) / 1000)
+        setErrorMessage(`Rate limit: Please wait ${remainingSeconds}s before sending another message.`)
+        return
+      }
+    }
+
     setSending(true)
-    setTimeout(() => {
+
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || 'YOUR_WEB3FORMS_ACCESS_KEY'
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: form.name,
+          email: form.email,
+          subject: form.subject || 'Portfolio Contact Form Submission',
+          message: form.message,
+          from_name: 'Portfolio Contact Form',
+        }),
+      })
+
+      const data = await res.json()
+
+      if (data.success) {
+        localStorage.setItem(LAST_SUBMIT_KEY, Date.now().toString())
+        setSubmitted(true)
+        setForm({ name: '', email: '', subject: '', message: '' })
+        setTimeout(() => setSubmitted(false), 5000)
+      } else {
+        setErrorMessage(data.message || 'Failed to send message. Please check your Web3Forms Access Key.')
+      }
+    } catch (err) {
+      console.error('Web3Forms error:', err)
+      setErrorMessage('Network error. Please check your connection and try again.')
+    } finally {
       setSending(false)
-      setSubmitted(true)
-      setForm({ name: '', email: '', subject: '', message: '' })
-      setTimeout(() => setSubmitted(false), 4000)
-    }, 1000)
+    }
   }
 
   const INFO_ITEMS = [
@@ -203,6 +253,12 @@ export default function Contact() {
         <div className="contact-toast" role="status" aria-live="polite">
           <span className="contact-toast-icon">✓</span>
           Message sent! I&apos;ll get back to you soon.
+        </div>
+      )}
+      {errorMessage && (
+        <div className="contact-toast contact-toast--error" role="alert" aria-live="assertive">
+          <span className="contact-toast-icon">✕</span>
+          {errorMessage}
         </div>
       )}
     </section>

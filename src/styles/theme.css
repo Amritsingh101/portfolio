@@ -1,45 +1,42 @@
 /* Light/dark class overrides are handled in variables.css via html.light / html.dark selectors.
    This file contains component-level theming helpers. */
 
+/* ── Accent buttons ── */
 html.dark .neo-btn-accent {
-  background: linear-gradient(135deg, #7C74FF 0%, #9F8FFF 100%);
+  background: #82B4C9;  /* bunny light blue */
+  color: #111111;
 }
 
 html.light .neo-btn-accent {
-  background: linear-gradient(135deg, #6C63FF 0%, #9F8FFF 100%);
+  background: #2E7088;  /* bunny deep teal */
+  color: #FFFFFF;
 }
 
-
-html.dark .hero-blob {
-  background: radial-gradient(circle at center, rgba(124, 116, 255, 0.25) 0%, transparent 70%);
-}
-
-html.light .hero-blob {
-  background: radial-gradient(circle at center, rgba(108, 99, 255, 0.18) 0%, transparent 70%);
-}
-
+/* ── Placeholder avatar fallback ── */
 html.dark .avatar-gradient {
-  background: linear-gradient(135deg, #7C74FF 0%, #FF7096 100%);
+  background: #2E7088;
 }
 
 html.light .avatar-gradient {
-  background: linear-gradient(135deg, #6C63FF 0%, #FF6584 100%);
+  background: #82B4C9;
 }
 
+/* ── Skill bar ── */
 html.dark .skill-bar-fill {
-  background: linear-gradient(90deg, #7C74FF 0%, #9F8FFF 100%);
+  background: #82B4C9;  /* bunny light blue */
 }
 
 html.light .skill-bar-fill {
-  background: linear-gradient(90deg, #6C63FF 0%, #9F8FFF 100%);
+  background: #2E7088;  /* bunny deep teal */
 }
 
+/* ── Timeline dot ── */
 html.dark .timeline-dot {
-  background: #7C74FF;
-  box-shadow: 0 0 12px rgba(124, 116, 255, 0.5);
+  background: #82B4C9;
+  box-shadow: 0 0 10px rgba(130, 180, 201, 0.35);
 }
 
 html.light .timeline-dot {
-  background: #6C63FF;
-  box-shadow: 0 0 12px rgba(108, 99, 255, 0.4);
+  background: #2E7088;
+  box-shadow: 0 0 10px rgba(46, 112, 136, 0.3);
 }

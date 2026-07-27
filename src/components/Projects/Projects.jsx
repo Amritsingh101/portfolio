@@ -74,11 +74,18 @@ export default function Projects() {
               <div
                 className="project-thumbnail"
                 style={{ background: project.gradient }}
-                aria-hidden="true"
               >
-                <div className="project-thumbnail-icon">
-                  {project.title.charAt(0)}
-                </div>
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="project-thumbnail-img"
+                  />
+                ) : (
+                  <div className="project-thumbnail-icon" aria-hidden="true">
+                    {project.title.charAt(0)}
+                  </div>
+                )}
               </div>
 
               <div className="project-body">
@@ -93,14 +100,41 @@ export default function Projects() {
                 </div>
 
                 <div className="project-actions">
-                  <a href={project.github} className="project-icon-btn" aria-label="GitHub repository">
-                    <GithubIcon />
-                    <span>Code</span>
-                  </a>
-                  <a href={project.live} className="project-icon-btn project-icon-btn--accent" aria-label="Live demo">
-                    <ExternalIcon />
-                    <span>Live Demo</span>
-                  </a>
+                  {project.github && project.github !== '#' ? (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-icon-btn"
+                      aria-label="GitHub repository"
+                    >
+                      <GithubIcon />
+                      <span>Code</span>
+                    </a>
+                  ) : (
+                    <span className="project-icon-btn project-icon-btn--disabled">
+                      <GithubIcon />
+                      <span>Code</span>
+                    </span>
+                  )}
+
+                  {project.live && project.live !== '#' ? (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-icon-btn project-icon-btn--accent"
+                      aria-label="Live demo"
+                    >
+                      <ExternalIcon />
+                      <span>Live Demo</span>
+                    </a>
+                  ) : (
+                    <span className="project-icon-btn project-icon-btn--disabled">
+                      <ExternalIcon />
+                      <span>Live Demo</span>
+                    </span>
+                  )}
                 </div>
               </div>
             </article>

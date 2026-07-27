@@ -48,7 +48,14 @@ export default function Contact() {
 
     setSending(true)
 
-    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || 'YOUR_WEB3FORMS_ACCESS_KEY'
+    const rawKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
+    const accessKey = (rawKey && rawKey !== 'YOUR_WEB3FORMS_ACCESS_KEY') ? rawKey.trim() : ''
+
+    if (!accessKey) {
+      setErrorMessage('Web3Forms Access Key is missing. Please set VITE_WEB3FORMS_ACCESS_KEY in Vercel environment variables.')
+      setSending(false)
+      return
+    }
 
     try {
       const res = await fetch('https://api.web3forms.com/submit', {

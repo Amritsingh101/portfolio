@@ -14,7 +14,7 @@ const INFO_CHIPS = [
   { icon: '✉', label: 'Email', value: personal.email },
   { icon: '📞', label: 'Phone', value: personal.phone },
   { icon: '💼', label: 'Status', value: 'Open to Work' },
-  { icon: '🎓', label: 'Degree', value: 'B.Tech ECE (IIITNR' },
+  { icon: '🎓', label: 'Degree', value: 'B.Tech ECE (IIITNR)' },
   { icon: '🌐', label: 'Languages', value: 'English, Hindi' },
 ]
 

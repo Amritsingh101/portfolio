@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1.6fr;
   gap: var(--sp-5);
-  align-items: start;
+  align-items: stretch;
 }
 
 /* Info card */
@@ -13,7 +13,9 @@
   padding: var(--sp-5);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: var(--sp-4);
+  height: 100%;
 }
 
 .contact-info-title {
@@ -117,6 +119,10 @@
   box-shadow: var(--neo-raised);
   border-radius: var(--neo-radius);
   padding: var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .contact-form {

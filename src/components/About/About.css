@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   gap: var(--sp-6);
-  align-items: start;
+  align-items: stretch;
 }
 
 /* Left card */
@@ -13,7 +13,9 @@
   padding: var(--sp-4);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: var(--sp-4);
+  height: 100%;
 }
 
 .about-avatar-wrap {
@@ -112,9 +114,15 @@ html.dark .about-avatar:hover .about-avatar-img {
 
 /* Right content */
 .about-content {
+  background: var(--bg-surface);
+  border-radius: var(--neo-radius);
+  box-shadow: var(--neo-raised);
+  padding: var(--sp-4);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: var(--sp-3);
+  height: 100%;
 }
 
 .about-content-title {

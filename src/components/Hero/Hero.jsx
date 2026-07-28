@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 import { personal, social } from '../../data/portfolio.js'
 import SocialIcon from '../SocialIcon/SocialIcon.jsx'
+import SideRays from '../SideRays/SideRays.jsx'
 import './Hero.css'
 
 const TYPING_SPEED = 80
@@ -12,6 +13,15 @@ export default function Hero() {
   const [displayText, setDisplayText] = useState('')
   const [roleIndex, setRoleIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
+  const [isDark, setIsDark] = useState(() => document.documentElement.classList.contains('dark'))
+
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setIsDark(document.documentElement.classList.contains('dark'))
+    })
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
+    return () => observer.disconnect()
+  }, [])
 
   useEffect(() => {
     const roles = personal.roles
@@ -38,6 +48,24 @@ export default function Hero() {
 
   return (
     <section className="hero" id="hero">
+      {isDark && (
+        <div className="hero-side-rays" aria-hidden="true">
+          <SideRays
+            speed={1.8}
+            rayColor1="#82B4C9"
+            rayColor2="#2E7088"
+            intensity={1.8}
+            spread={2.5}
+            origin="top-left"
+            tilt={15}
+            saturation={1.2}
+            blend={0.7}
+            falloff={1.5}
+            opacity={0.75}
+          />
+        </div>
+      )}
+
       <div className="hero-inner">
         {/* Left */}
         <div className="hero-content">

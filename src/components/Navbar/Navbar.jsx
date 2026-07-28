@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { personal } from '../../data/portfolio.js'
 import ThemeToggle from '../ThemeToggle/ThemeToggle.jsx'
+import GlassSurface from '../GlassSurface/GlassSurface.jsx'
 import './Navbar.css'
 
 export function LogoIcon({ className }) {
@@ -71,40 +72,50 @@ export default function Navbar({ theme, onToggleTheme }) {
 
   return (
     <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`} role="navigation">
-      <div className="navbar-inner">
-        <a href="#hero" className="navbar-logo" aria-label="Home">
-          <LogoIcon className="navbar-logo-icon" />
-          {/* <span className="navbar-logo-text">{personal.name.split(' ')[0]}</span> */}
-        </a>
+      <GlassSurface
+        width="100%"
+        height="100%"
+        borderRadius={50}
+        backgroundOpacity={0.12}
+        blur={14}
+        saturation={1.4}
+        className="navbar-glass-wrapper"
+      >
+        <div className="navbar-inner">
+          <a href="#hero" className="navbar-logo" aria-label="Home">
+            <LogoIcon className="navbar-logo-icon" />
+            {/* <span className="navbar-logo-text">{personal.name.split(' ')[0]}</span> */}
+          </a>
 
-        <ul className="navbar-links">
-          {NAV_LINKS.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className={`navbar-link${active === link.href ? ' navbar-link--active' : ''}`}
-                onClick={() => handleNavClick(link.href)}
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+          <ul className="navbar-links">
+            {NAV_LINKS.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className={`navbar-link${active === link.href ? ' navbar-link--active' : ''}`}
+                  onClick={() => handleNavClick(link.href)}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
 
-        <div className="navbar-actions">
-          <ThemeToggle theme={theme} onToggle={onToggleTheme} />
-          <button
-            className={`navbar-hamburger${menuOpen ? ' open' : ''}`}
-            aria-label="Toggle menu"
-            aria-expanded={menuOpen}
-            onClick={() => setMenuOpen((o) => !o)}
-          >
-            <span />
-            <span />
-            <span />
-          </button>
+          <div className="navbar-actions">
+            <ThemeToggle theme={theme} onToggle={onToggleTheme} />
+            <button
+              className={`navbar-hamburger${menuOpen ? ' open' : ''}`}
+              aria-label="Toggle menu"
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen((o) => !o)}
+            >
+              <span />
+              <span />
+              <span />
+            </button>
+          </div>
         </div>
-      </div>
+      </GlassSurface>
 
       {/* Mobile drawer */}
       <div className={`navbar-drawer${menuOpen ? ' navbar-drawer--open' : ''}`} aria-hidden={!menuOpen}>

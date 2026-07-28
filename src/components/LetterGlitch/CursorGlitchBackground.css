@@ -1,0 +1,25 @@
+.cursor-glitch-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  /* Radial cursor spotlight mask */
+  mask-image: radial-gradient(circle 260px at var(--cursor-x, -500px) var(--cursor-y, -500px),
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0) 70%);
+  -webkit-mask-image: radial-gradient(circle 260px at var(--cursor-x, -500px) var(--cursor-y, -500px),
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0) 70%);
+}
+
+.cursor-glitch-container.is-visible {
+  opacity: 0.2;
+}

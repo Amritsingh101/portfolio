@@ -108,9 +108,9 @@ html.dark {
   --text-primary: #F0F0F0;
   --text-secondary: #BBBBBB;
   --text-muted: #888888;
-  --accent: #82B4C9;
+  --accent: #2E7088;
   /* bunny light blue */
-  --accent-soft: rgba(130, 180, 201, 0.12);
+  --accent-soft: rgba(46, 112, 136, 0.10);
   --accent-alt: #A8C8D6;
   /* bunny pale blue */
   --success: #5BADA0;
